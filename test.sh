@@ -5,6 +5,7 @@
 #SBATCH --gres=gpu:1
 #SBATCH -n 4
 #SBATCH -o %j.log
+#SBATCH -o %j.log
 
 echo "running"
 export LD_LIBRARY_PATH=/appl/anaconda3/envs/SE3nv/lib/:$LD_LIBRARY_PATH
