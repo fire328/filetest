@@ -11,7 +11,7 @@ echo "running"
 export LD_LIBRARY_PATH=/appl/anaconda3/envs/diffusion/lib/:$LD_LIBRARY_PATH
 source /appl/anaconda3/etc/profile.d/conda.sh
 conda activate /appl/anaconda3/envs/diffusion/
-module load cuda/11.8
+module load cuda/11.1
 nvcc --version
 hostname -s
 nvidia-smi
