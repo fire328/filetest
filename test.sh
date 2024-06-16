@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -J MPNN_test
-#SBATCH -p a5000_veryshort
+#SBATCH -p mix_veryshort
 #SBATCH -N 1
 #SBATCH --gres=gpu:1
 #SBATCH -n 4
