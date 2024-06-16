@@ -12,6 +12,8 @@ export LD_LIBRARY_PATH=/appl/anaconda3/envs/SE3nv/lib/:$LD_LIBRARY_PATH
 source /appl/anaconda3/etc/profile.d/conda.sh
 conda activate /appl/anaconda3/envs/SE3nv/
 module load cuda/11.8
+nvcc --version
+
 #### -----Generate any Protein------####
 #/appl/RFdiffusion/scripts/run_inference.py 'contigmap.contigs=[150-150]' inference.output_prefix=test_outputs/test inference.num_designs=10
 
