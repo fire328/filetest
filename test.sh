@@ -16,6 +16,7 @@ nvcc --version
 hostname -s
 nvidia-smi
 
+cd /home/baelab/rfdAA/rf_diffusion_all_atom
 echo "python running"
-python /home/baelab/rfdAA/rf_diffusion_all_atom/run_inference.py inference.deterministic=True diffuser.T=100 inference.output_prefix=output/ligand_only/sample inference.input_pdb=./input/7v11.pdb contigmap.contigs=['150-150'] inference.ligand=OQO inference.num_designs=1 inference.design_startnum=0
+python ./run_inference.py inference.deterministic=True diffuser.T=100 inference.output_prefix=/home/baelab/Heesoo/test/output/ligand_only/sample inference.input_pdb=/home/baelab/Heesoo/test/input/7v11.pdb contigmap.contigs=['150-150'] inference.ligand=OQO inference.num_designs=1 inference.design_startnum=0
 
