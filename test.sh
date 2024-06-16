@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -J MPNN_test
-#SBATCH -p g3090_veryshort
+#SBATCH -p g4090_veryshort
 #SBATCH -N 1
 #SBATCH --gres=gpu:1
 #SBATCH -n 4
