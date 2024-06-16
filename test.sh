@@ -17,4 +17,5 @@ hostname -s
 nvidia-smi
 
 echo "python running"
-/home/baelab/rfdAA/rf_diffusion_all_atom/run_inference.py inference.deterministic=True diffuser.T=100 inference.output_prefix=output/1BC8/ inference.input_pdb=1BC8.pdb contigmap.contigs=['150-150'] inference.ligand= inference.num_designs=3 inference.design_startnum=0
+/home/baelab/rfdAA/rf_diffusion_all_atom/run_inference.py inference.deterministic=True diffuser.T=100 inference.output_prefix=output/ligand_only/sample inference.input_pdb=input/7v11.pdb contigmap.contigs=['150-150'] inference.ligand=OQO inference.num_designs=1 inference.design_startnum=0
+
