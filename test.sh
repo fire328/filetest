@@ -13,7 +13,7 @@ source /appl/anaconda3/etc/profile.d/conda.sh
 conda activate /appl/anaconda3/envs/SE3nv/
 module load cuda/11.8
 nvcc --version
-hostname
+hostname -s
 nvidia-smi
 
 #### -----Generate any Protein------####
