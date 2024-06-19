@@ -4,7 +4,7 @@
 #SBATCH -N 1
 #SBATCH --gres=gpu:1
 #SBATCH -n 4
-#SBATCH -o "RFdiffusionAATestmix_veryshort%j.log"
+#SBATCH -o "RFdiffusionAATest_mix_veryshort_%j.log"
 
 echo "RFdiffusionAATest mix_veryshort running"
 export LD_LIBRARY_PATH=/appl/anaconda3/envs/diffusion/lib/:$LD_LIBRARY_PATH
