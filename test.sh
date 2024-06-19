@@ -21,5 +21,5 @@ nvidia-smi
 cd /appl/LigandMPNN
 echo " "
 echo "LigandMPNN python running"
-python ./run.py --seed 111 --pdb_path "/home/baelab/Heesoo/test/input/test_0.pdb" --out_folder "/home/baelab/Heesoo/test/output/result" --chains_to_design "A"
+python ./run.py --seed 111 --pdb_path "/home/baelab/Heesoo/test/input/test_0.pdb" --out_folder "/home/baelab/Heesoo/test/output" --chains_to_design "A"
 
