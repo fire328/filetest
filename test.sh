@@ -22,7 +22,7 @@ cd /appl/RFdiffusion/scripts/
 echo " "
 echo "RFdiffusion python start"
 #### -----Generate any Protein------####
-python ./run_inference.py contigmap.contigs=['150-150'] inference.output_prefix=/home/baelab/Heesoo/test/result inference.num_designs=1
+python ./run_inference.py contigmap.contigs=['150-150'] inference.output_prefix=/home/baelab/Heesoo/test/output/result inference.num_designs=1
 
 cd /appl/RFdiffusion/scripts/
 #### -----Generate Binder ----- ####
