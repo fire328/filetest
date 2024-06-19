@@ -10,7 +10,7 @@ echo "RFdiffusionTest mix_veryshort start"
 export LD_LIBRARY_PATH=/appl/anaconda3/envs/SE3nv/lib/:$LD_LIBRARY_PATH
 source /appl/anaconda3/etc/profile.d/conda.sh
 conda activate /appl/anaconda3/envs/SE3nv/
-module load cuda/11.8
+module load cuda/12.2
 echo " "
 nvcc --version
 echo " "
