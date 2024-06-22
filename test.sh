@@ -1,12 +1,12 @@
 #!/bin/bash
 #SBATCH -J MPNNtest
-#SBATCH -p mix_veryshort
+#SBATCH -p rome_veryshort
 #SBATCH -N 1
 #SBATCH --gres=gpu:1
 #SBATCH -n 4
-#SBATCH -o "MPNNtest_mix_veryshort_%j.log"
+#SBATCH -o "MPNNtest_rome_veryshort_%j.log"
 
-echo "MPNNtest mix_veryshort start"
+echo "MPNNtest rome_veryshort start"
 export LD_LIBRARY_PATH=/appl/anaconda3/envs/diffusion/lib/:$LD_LIBRARY_PATH
 source /appl/anaconda3/etc/profile.d/conda.sh
 conda activate /appl/anaconda3/envs/ligandmpnn_env/
