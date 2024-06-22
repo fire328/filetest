@@ -1,15 +1,15 @@
 #!/bin/bash
-#SBATCH -J MPNNtest
-#SBATCH -p rome_veryshort
+#SBATCH -J ColabDesignTest
+#SBATCH -p mix_veryshort
 #SBATCH -N 1
 #SBATCH --gres=gpu:1
 #SBATCH -n 4
-#SBATCH -o "MPNNtest_rome_veryshort_%j.log"
+#SBATCH -o ColabDesignTest_mix_veryshort_%j.log
 
-echo "MPNNtest rome_veryshort start"
-export LD_LIBRARY_PATH=/appl/anaconda3/envs/diffusion/lib/:$LD_LIBRARY_PATH
+echo "ColabDesignTest mix_veryshort start"
+export LD_LIBRARY_PATH=/appl/anaconda3/envs/SE3nv/lib/:$LD_LIBRARY_PATH
 source /appl/anaconda3/etc/profile.d/conda.sh
-conda activate /appl/anaconda3/envs/ligandmpnn_env/
+conda activate /appl/anaconda3/envs/SE3nv/
 module load cuda/12.2
 echo " "
 nvcc --version
@@ -18,10 +18,16 @@ hostname -s
 echo " "
 nvidia-smi
 
-cd /appl/LigandMPNN
-echo " "
-echo "LigandMPNN python start"
-python ./run.py --seed 111 --pdb_path "/home/baelab/Heesoo/test/input/test_0.pdb" --out_folder "/home/baelab/Heesoo/test/output" --chains_to_design "A"
+cd /home/baelab/Heesoo/test
 
 echo " "
-echo "LigandMPNN python end"
+echo "ColabDesign python start"
+
+#### -----Generate any Protein------####
+#python /appl/RFdiffusion/scripts/run_inference.py contigmap.contigs=['150-150'] inference.output_prefix=/home/baelab/Heesoo/test/output/result inference.num_designs=1
+
+#### -----Generate Binder ----- ####
+/home/baelab/anaconda3/envs/ColabDesignHeesoo/bin/python /home/baelab/gitforder/colabdesign/rf/designability_test.py --pdb=/home/baelab/Heesoo/test/output/result_0.pdb --loc=/home/baelab/Heesoo/test/output/result --contig=A:2:-:1:1:6:/:0: :1:5:0:-:1:5:0 --copies=1 --num_seqs=1 --num_recycles=3 --rm_aa=C --mpnn_sampling_temp=0.0001 --num_designs=1 --initial_guess --use_multimer 
+
+echo " "
+echo "ColabDesign python end"
